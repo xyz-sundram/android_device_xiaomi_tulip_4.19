@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018-2019 The evolutionOS Project
+# Copyright (C) 2018-2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_tulip.mk
+    $(LOCAL_DIR)/lineage_twolip.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_tulip-user \
-    evolution_tulip-userdebug \
-    evolution_tulip-eng
+    lineage_twolip-user \
+    lineage_twolip-userdebug \
+    lineage_twolip-eng

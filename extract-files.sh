@@ -27,7 +27,7 @@ fi
 
 set -e
 
-export DEVICE=tulip
+export DEVICE=twolip
 export DEVICE_COMMON=sdm660-common
 export VENDOR=xiaomi
 

@@ -20,26 +20,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit from tulip device
+# Inherit from twolip device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-
-# Build flags
-EVO_BUILD_TYPE := UNOFFICIAL
-TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_USES_MINI_GAPPS = true
-
-PRODUCT_NAME := evolution_tulip
 PRODUCT_BRAND := Xiaomi
-PRODUCT_DEVICE := tulip
+PRODUCT_DEVICE := twolip
 PRODUCT_MANUFACTURER := Xiaomi
+PRODUCT_NAME := lineage_twolip
 PRODUCT_MODEL := Redmi Note 6 Pro
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 TARGET_VENDOR_PRODUCT_NAME := tulip
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="tulip-user 9 PKQ1.180904.001 V10.3.2.0.PEKMIXM release-keys"
+
+BUILD_FINGERPRINT := xiaomi/tulip/tulip:9/PKQ1.180904.001/V10.3.2.0.PEKMIXM:user/release-keys
