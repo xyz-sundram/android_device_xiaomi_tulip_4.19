@@ -19,3 +19,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Cutout
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_hide_display_cutout=true
+
+#superior os maintianer string
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.spos.maintainer=SundraM
