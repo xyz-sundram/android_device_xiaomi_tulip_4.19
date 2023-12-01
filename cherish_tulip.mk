@@ -20,22 +20,27 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
 # Inherit from tulip device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+# Cherish Flags
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP  := true
+CHERISH_BUILD_TYPE := OFFICIAL
+CHERISH_MAINTAINER := Sundram
+CHERISH_CHIPSET := Sdm660
+CHERISH_BATTERY := 4000mAh
+CHERISH_DISPLAY := 1080x2160
+
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := tulip
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := lineage_tulip
+PRODUCT_NAME := cherish_tulip
 PRODUCT_MODEL := Redmi Note 6 Pro
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 TARGET_VENDOR_PRODUCT_NAME := tulip
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="tulip-user 9 PKQ1.180904.001 V10.3.2.0.PEKMIXM release-keys"
-
-BUILD_FINGERPRINT := xiaomi/tulip/tulip:9/PKQ1.180904.001/V10.3.2.0.PEKMIXM:user/release-keys
